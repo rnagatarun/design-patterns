@@ -1,9 +1,9 @@
-public class LazyLoading {
+public class LazySingleton {
 
     /*
-     * LAZY LOADING SINGLETON
-     * ----------------------
-     * In Lazy Loading, the Singleton instance is created
+     * LAZY SINGLETON
+     * -------------
+     * In Lazy Singleton, the Singleton instance is created
      * only when it is needed for the first time.
      *
      * The object is created only when getInstance()
@@ -29,19 +29,19 @@ public class LazyLoading {
      */
 
     // Initially no object is created
-    private static LazyLoading instance;
+    private static LazySingleton instance;
 
     // Private constructor prevents external object creation
-    private LazyLoading() {
+    private LazySingleton() {
         System.out.println("Lazy Singleton Object Created");
     }
 
     // Object created only when needed
-    public static LazyLoading getInstance() {
+    public static LazySingleton getInstance() {
 
         // Create object only first time
         if (instance == null) {
-            instance = new LazyLoading();
+            instance = new LazySingleton();
         }
 
         // Return same object afterwards
