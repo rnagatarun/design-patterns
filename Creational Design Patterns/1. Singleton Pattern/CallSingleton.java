@@ -4,6 +4,8 @@ public class CallSingleton {
         EagerSingleton.getInstance();
 
         System.out.println("Calling LazySingleton...");
+        System.out.println("LazySingleton initialized? " + LazySingleton.isInitialized());
         LazySingleton.getInstance();
+        System.out.println("LazySingleton initialized? " + LazySingleton.isInitialized());
     }
 }

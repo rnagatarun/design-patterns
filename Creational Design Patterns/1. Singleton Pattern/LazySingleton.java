@@ -36,6 +36,10 @@ public class LazySingleton {
         System.out.println("Lazy Singleton Object Created");
     }
 
+    public static boolean isInitialized() {
+        return instance != null;
+    }
+
     // Object created only when needed
     public static LazySingleton getInstance() {
 
